@@ -1,22 +1,20 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import Navbar from '@componets/components/Navbar'
-import Footer from '@componets/components/Footer'
-import Hero from '@componets/components/Hero'
+import Head from "next/head"
+import { Inter } from "next/font/google"
+import Navbar from "@componets/components/Navbar"
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] })
 
 export default function Home() {
   return (
     <>
-      <div className='flex justify-center items-center'>
-        <main className="flex justify-center pt-5 h-full w-[1800px] bg-white rounded-md">
+      <Head>
+        <title>Mateo</title>
+      </Head>
+      <main>
+        <section className='w-full container mx-auto p-[20px]'>
           <Navbar />
-        </main>
-        <Footer />
-        <Hero />
-      </div>
+        </section>
+      </main>
     </>
-
   )
 }
